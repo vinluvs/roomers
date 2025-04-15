@@ -43,3 +43,9 @@ nav{
 .mynav{
   background-color:var(--primary-color);
 }
+.input {
+  @apply block w-full mb-2 p-2 rounded bg-gray-800 text-white placeholder-gray-400;
+}
+.input:focus {
+  @apply outline-none ring-2 ring-blue-500;
+}

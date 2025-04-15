@@ -7,7 +7,7 @@ const tabs = ["🧑‍🎓Tenant", "🧑‍🏫Owner", "⚙️Account"];
 const paths = { "🧑‍🎓Tenant": "", "🧑‍🏫Owner": "owner", "⚙️Account": "account" }; // mapping to routes so that icons doesn't interfere
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState("Tenant");
+  const [activeTab, setActiveTab] = useState("🧑‍🎓Tenant");
   const menuRef = useRef(null);
 
   useEffect(() => {
@@ -61,12 +61,12 @@ const Navbar = () => {
         }`}
       >
         <h1 className="text-4xl font-bold mb-8">R000MS</h1>
-        {["Tenant", "Owner", "Account"].map((tab) => (
+        {tabs.map((tab) => (
           <NavLink
-            to={`/${tab}`}
+            to={`/${paths[tab]}`}
             key={tab}
-            className={`relative py-2 px-4 transition-all duration-300 ${
-              activeTab === tab ? "bg-gray-400 text-black" : ""
+            className={`tabhover relative py-4 px-4 transition-all duration-300 ${
+              activeTab === tab ? "tab" : ""
             }`}
             onClick={() => {
               setActiveTab(tab);

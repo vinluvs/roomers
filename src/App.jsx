@@ -7,17 +7,24 @@ import Tenant from './pages/Tenant';
 import Owner from './pages/Owner';
 import Account from './pages/Account';
 import PageTransition from './components/PageTransition';
+import NotFoundPage from './pages/NotFoundPage';
+import TenantRoom from './pages/TenantRoom';
 
 function PageWrapper() {
   const location = useLocation(); // ✅ Now inside Router
   return (
     <>
-      <Navbar />
+      
       <div className="mx-1">
+        <Navbar />
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Tenant />} />
+          <Route path='/TenantRoom' element={<PageTransition><TenantRoom /></PageTransition>} />
+
           <Route path="/owner" element={<PageTransition><Owner /></PageTransition>} />
+
           <Route path="/account" element={<PageTransition><Account /></PageTransition>} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>
       </>
