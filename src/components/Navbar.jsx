@@ -27,7 +27,7 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-[999] bg-blend-darken backdrop-blur-sm p-4 text-white shadow-md">
+    <nav className="fixed top-0 left-0 w-full z-[999] backdrop-blur-sm p-4 text-white shadow-md shadow-neutral-800/50">
       <div className="flex justify-between  items-center max-w-7xl mx-auto">
         {/* Desktop Menu */}
         {!isOpen && <h1 className="text-2xl font-bold">R000MS</h1>}
@@ -56,7 +56,7 @@ const Navbar = () => {
       {/* Mobile Menu (Always Hidden except on clicking menu) */}
       <div
         ref={menuRef}
-        className={`fixed top-0 left-0 z-50 h-dvh bg-[#181818] mx-auto p-4 flex flex-col justify-center items-center min-w-full shadow-md transition-opacity duration-300 ${
+        className={`bg-primary fixed top-0 left-0 z-50 h-dvh mx-auto p-4 flex flex-col justify-center items-center min-w-full shadow-md transition-opacity duration-300 ${
           isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >

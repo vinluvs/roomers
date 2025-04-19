@@ -1,27 +1,28 @@
 @import "tailwindcss";
 :root{
   --primary-color: #181818;
-  --secondary-color: #1f1f1f;
+  --secondary-color: #111a35;
   --tertiary-color: #282c34;
   --text-color: #dae2ff;
 }
 body{
-  background-color: var(--primary-color);
+  background: linear-gradient(150deg, var(--primary-color), var(--secondary-color));
   font-family: 'Roboto', sans-serif;
   color: #dae2ff;
-  overflow:hidden;
-}
-nav{
-  background-color:var(--secondary-color);
+  overflow:auto;
+  @apply [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:rounded-full
+  [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500;
 }
 .tabhover:hover {
   background-color: var(--tertiary-color);
 }
 
 .tab{
-  background-color:var(--tertiary-color);
+  background-color: var(--secondary-color);
+  @apply shadow-md shadow-blue-400/30;
   color: #dae2ff;
   border-radius: 0.5rem;
+
 }
 .splash-screen {
   position: fixed;
@@ -32,7 +33,7 @@ nav{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #282c34;
+  background: linear-gradient(150deg, var(--primary-color), var(--secondary-color));
   color: white;
   z-index: 1000;
 }
@@ -40,11 +41,8 @@ nav{
 .splash-screen h1 {
   font-size: 3rem;
 }
-.mynav{
-  background-color:var(--primary-color);
-}
 .input {
-  @apply block w-full mb-2 p-2 rounded bg-gray-800 text-white placeholder-gray-400;
+  @apply block w-full mb-2 p-2 border-b-2 border-b-fuchsia-500/50 rounded bg-gray-800 text-white placeholder-gray-400;
 }
 .input:focus {
   @apply outline-none ring-2 ring-blue-500;

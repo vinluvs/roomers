@@ -16,9 +16,8 @@ function TenantNav(currentTab) {
     };
     
   return (
-    <div className="flex mt-22 justify-center shadow-md items-center">
-    <div className="mynav w-3xl rounded-xl  top-0 z-40">
-        <ul className="flex justify-around items-center p-2  font-bold">
+    <div className="flex mt-20 justify-center rounded-xl z-40 ">
+        <ul className="flex justify-around w-2xl p-2 shadow-md  ">
           {tabs.map((tab) => (
             <Link to={`/${paths[tab]}`}
               key={tab}
@@ -29,7 +28,6 @@ function TenantNav(currentTab) {
               </Link>))
               }
         </ul>
-      </div>
       </div>
   )
 }

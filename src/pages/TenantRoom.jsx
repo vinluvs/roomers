@@ -23,9 +23,9 @@ const TenantRoom = () => {
   const past = properties.filter(prop => prop.oldtenants?.includes(tenantId));
 
   return (
-    <div className="bg-black bg-opacity-50 backdrop-blur-md min-h-screen text-white p-4 rounded-xl shadow-lg">
+    <div className=" bg-opacity-50 backdrop-blur-md min-h-screen text-white p-4 rounded-xl shadow-lg">
       <TenantNav currentTab="🏡My Room" />
-      <h1 className="text-3xl font-bold mb-4">🛏️ Your Room</h1>
+      <h1 className="mt-10 text-3xl font-bold mb-4">🛏️ Your Room</h1>
 
       {current ? <CurrentProperty property={current} /> : (
         <p className="text-gray-400 mb-4">You're not currently assigned to any property.</p>

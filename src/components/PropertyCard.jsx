@@ -11,7 +11,7 @@ const PropertyCard = ({ data }) => {
   return (
     <div
       ref={cardRef}
-      className="bg-white/10 backdrop-blur-md rounded-2xl p-4 shadow-md hover:scale-105 transition-all duration-300"
+      className=" backdrop-blur-md shadow-md border-2 border-gray-500 rounded-lg p-4 hover:scale-105 transition-all duration-300"
     >
       <h2 className="text-xl font-semibold">{data.title}</h2>
       <p>{data.location}</p>
